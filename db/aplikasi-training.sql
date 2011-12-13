@@ -11,6 +11,8 @@ create table Konfirmasi_Pembayaran
 (
 id int(5) not null primary key auto_increment,
 no_pendaftaran int(5) not null,
+nama_peserta varchar(30) not null,
+paket_training varchar(5) not null,
 tanggal_pembayaran date not null,
 nominal varchar(255) not null,
 pembayaran varchar(50) not null,

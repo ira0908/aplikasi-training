@@ -1,3 +1,14 @@
+<?php
+session_start();
+mysql_connect("localhost","root","admin");
+mysql_selectdb("wew");
+
+$q=mysql_query("select*from Konfirmasi_Pembayaran");
+$a=mysql_fetch_array($q);
+
+{
+
+print"
 <html>
 <head>
 <title>Konfirmasi Pembayaran</title>
@@ -8,7 +19,7 @@
 
 <ul>
 <p>
-<table border="1">
+<table border='1'>
 <tr> 
 <td>No Pendaftaran</td>
 <td>Nama Peserta</td>
@@ -20,38 +31,8 @@
 <td>Keterangan</td>
 </tr>
 <tr> 
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr> 
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr> 
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr> 
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td>$q['no_pendaftaran']</td>
+<td>$q['tanggal_pembayaran']</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -82,4 +63,6 @@
 </center>
 </table>
 </body>
-</html>
+</html>"
+
+?>

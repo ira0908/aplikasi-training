@@ -3,7 +3,7 @@
    <title>
      Konfirmasi Pembayaran
    </title>
-   <form action="listKonfirmasiPembayaran.html">
+   <form action="proses_entry_Konfirmasi_Pembayaran.php">
    <center><h2>
 	   Konfirmasi Pembayaran
    </h2>
@@ -16,7 +16,7 @@
         No.Pembayaran
       </td>
       <td>
-         <input type="text" name="No.pembayaran" class="">
+         <input type="text" name="no_pembayaran" class="">
          &nbsp;
       </td>
    </tr>
@@ -25,7 +25,7 @@
         Tgl.Pembayaran
       </td>
       <td>
-         <input type="text" name="tgl_pembayaran" class="">
+         <input type="text" name="tanggal_pembayaran" class="">
          &nbsp;
       </td>
    </tr>
@@ -34,7 +34,7 @@
         Nominal
       </td>
       <td>
-         <input type="text" name="Nominal_pembayaran" class="">
+         <input type="text" name="Nominal" class="">
          &nbsp;
       </td>
     </tr>
@@ -43,8 +43,8 @@
 		Pembayaran
     </td>
       <td>
-		  <input type="radio" name="N_P">Cash
-		  <input type="radio" name="N_P">Transfer
+		  <input type="radio" name="pembayaran">Cash
+		  <input type="radio" name="pembayaran">Transfer
 		  &nbsp;
 	  </td>
    </tr>
@@ -53,7 +53,7 @@
        Dari Rekening
       </td>
       <td>
-         <input type="text" name="Rekening" class="">
+         <input type="text" name="dari_rekening" class="">
          &nbsp;
       </td>
    </tr>
@@ -62,8 +62,7 @@
         Keterangan
       </td>
       <td>
-         <textarea name="Keterangan" class="">
-         &nbsp;
+         <textarea name="keterangan" class="">
          </textarea>
       </td>
    </tr>
