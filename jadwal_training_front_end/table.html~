@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>Jadwal Training</title>
+	<script type='text/javascript'>
+		{			
+		window.alert("Selemat Datang Di Jadwal Training");
+			var x=window.confirm("apakah pacar anda baik-baik saja")
+			if(x)
+			window.alert("Good")
+			else
+			window.alert("No good")	
+			var y=window.prompt("Masukan Nama Anda Supaya Saya Percaya")
+			window.alert(y)	
+		}
+	</script>
+	</head>
+
+	<body>
+		<table bgcolor='' width='62%' border='1' cellpadding='0'>
+			<tr>
+				<td rowspan='2' align='center'>Kode Training</td>
+				<td colspan='2' align='center'>Tanggal</td>
+				<td colspan='2' align='center'>Durasi</td>
+				<td rowspan='2' align='center'>Waktu Training</td>
+				<td rowspan='2' align='center'>Maksimal Peserta</td>
+				<td rowspan='2' align='center'>Harga Training</td>
+				<td rowspan='2' align='center'>Lokasi Training</td>
+			</tr>
+			<tr align='center'>
+				<td>mulai</td>
+				<td>selesai</td>
+				<td>jam</td>
+				<td>hari</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+	</body>
+</html>
