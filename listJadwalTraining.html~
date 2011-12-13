@@ -1,5 +1,20 @@
 <html>
 	<head>
+		<title>Jadwal Training</title>
+	<script type='text/javascript'>
+		{			
+		window.alert("Selemat Datang Di Jadwal Training");
+			var x=window.confirm("apakah pacar anda baik-baik saja")
+			if(x)
+			window.alert("Good")
+			else
+			window.alert("No good")	
+			var y=window.prompt("Masukan Nama Anda Supaya Saya Percaya")
+			var z=window.prompt("Nama anda harus diisi")
+			window.alert(y)	
+			window.alert(z)
+		}
+	</script>
 	</head>
 
 	<body>
