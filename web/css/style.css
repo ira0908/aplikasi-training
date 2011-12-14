@@ -1,0 +1,61 @@
+body
+	{
+	Font-Family : Verdana;
+	}
+div
+	{
+	
+	}
+ul
+	{
+	Margin-Top : 15%;
+	List-Style : None;
+	Border : 1px Solid Black;
+	Width : 360px;
+	Padding : 0;
+	Border-Radius : 10px 10px 10px 10px;
+	}
+ul:hover
+	{
+	Box-Shadow : 3px 3px 3px 0 Black;
+	}
+h3
+	{
+	Font-Size : 25pt;
+	Background-Color : Chartreuse;
+	Color : White;
+	Margin : 0;
+	Height : 50px;
+	Padding-Top : 8px;
+	Border-Radius : 10px 10px 0 0;
+	}
+li
+	{
+	Margin-Top : 8px;
+	}
+li.bottom
+	{
+	Text-Align : Right;
+	}
+input
+	{
+	Border-Radius : 8px 8px 8px 8px;
+	}
+input.input
+	{
+	Height : 35px;
+	Font-Size : 11pt;
+	}
+input.button
+	{
+	Height : 30px;
+	Font-Size : 12pt;
+	Background : White;
+	Padding-Top : 2px;
+	Margin-Right : 12px;
+	Margin-Bottom : 12pt;
+	}
+input:hover
+	{
+	Box-Shadow : 2px 2px 2px 0 Black;
+	}
