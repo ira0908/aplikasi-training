@@ -1,31 +1,31 @@
 <?php
-
+	include "configuration/configuration.php";
+	$query1 = mysql_query("SELECT * FROM Paket_Training");
+	$query2 = mysql_query("SELECT * FROM Jadwal_Training WHERE Jadwal_Training.kode_paket_training=id");
 ?>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="development-bundle/themes/base/ui.all.css" />
 		<title>
 			Pendaftaran Training
 		</title>
+		<link rel="stylesheet" type="text/css" href="development-bundle/themes/base/ui.all.css" />
 		<script type="text/javascript" src="development-bundle/jquery-1.3.2.js"></script>
-    <script type="text/javascript" src="development-bundle/ui/ui.core.js"></script>
-    <script type="text/javascript" src="development-bundle/ui/ui.datepicker.js"></script>   
-    <script type="text/javascript" src="development-bundle/ui/i18n/ui.datepicker-id.js"></script>
-
-    <script type="text/javascript" src="development-bundle/ui/effects.core.js"></script>
-    <script type="text/javascript" src="development-bundle/ui/effects.drop.js"></script>
-
-    <script type="text/javascript"> 
-      $(document).ready(function(){
-        $("#tanggal").datepicker({
-          showAnim    : "drop",
-          showOptions : { direction: "up" }
-        });
-      });
-    </script>
+		<script type="text/javascript" src="development-bundle/ui/ui.core.js"></script>
+		<script type="text/javascript" src="development-bundle/ui/ui.datepicker.js"></script>   
+		<script type="text/javascript" src="development-bundle/ui/i18n/ui.datepicker-id.js"></script>
+		<script type="text/javascript" src="development-bundle/ui/effects.core.js"></script>
+		<script type="text/javascript" src="development-bundle/ui/effects.drop.js"></script>
+		<script type="text/javascript"> 
+			$(document).ready(function(){
+			$("#tanggal").datepicker({
+			showAnim    : "drop",
+			showOptions : { direction: "up" }
+			});
+		});
+		</script>
 	</head>
 	<body>
-		<form>
+		<form method="post" action="system/save.php">
 			<table>
 				<tr>
 					<td>
@@ -55,6 +55,14 @@
 				</tr>
 				<tr>
 					<td>
+						Pekerjaan
+					</td>
+					<td>
+						<input id="tanggal" type="text" name="pekerjaan" />
+					</td>
+				</tr>
+				<tr>
+					<td>
 						Email
 					</td>
 					<td>
@@ -76,7 +84,10 @@
 					<td>
 						<select name="PaketTraining">
 							<?php
-								
+								while($array1=mysql_fetch_array($query1))
+								{ ?>
+							<option value="<?=$array1['id']?>"><?=$array1['nama_paket_training']?></option>
+							<?php	}
 							?>
 						</select>
 					</td>
@@ -87,12 +98,12 @@
 					</td>
 					<td>
 						<select name="TanggalTraining">
-							<option value>
-								&nbsp;
-							</option>
-							<option value="">
-								&nbsp;
-							</option>
+							<?php
+								while($array2=mysql_fetch_array($query2))
+								{ ?>
+									<option value="<?=$array2['id']?>"><?=$array2['tanggal_mulai']?></option>
+							<?php	}
+							?>
 						</select>
 					</td>
 				</tr>
@@ -117,6 +128,14 @@
 						<textarea name="keterangan" class="">
 							&nbsp;
 						</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						&nbsp;
+					</td>
+					<td>
+						<input type="submit" value="submit" name="submit" />
 					</td>
 				</tr>
 			</table>
