@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php
+	include ("configuration/configuration.php");
+	$query=mysql_query("select* from Jadwal_Training");
+?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Artivisi</title>
+	<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
+	
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="header"> </div>
+    <div id="left">
+      <div id="logo">
+        <h1>Artivisi</h1>
+        <p>Intermedia</p>
+      </div>
+      <div id="nav">
+        <ul>
+          <li class="important"><a href="index.html">Home</a></li>
+          <li><a href="entryPendaftaran.php">Pendaftaran Training</a></li>
+          <li><a href="entryPembayaran.php">Konfirmasi Pembayaran</a></li>
+          <li><a href="listJadwalTraining.php">Jadwal Training</a></a></li>
+          <li><a href="http://">Klien</a></li>
+          <li><a href="http://">Contact us</a></li>
+        </ul>
+      </div>
+      <div id="news">
+        <h2>Latest News</h2>
+        <h3>12/12/11</h3>
+        <p>Pembuatan pertama web.</p>
+        <div class="hr-dots"> </div>
+        <p class="more"><a href="http://">more</a></p>
+      </div>
+      <div id="support">
+        <p>Call: +3265-9856-789</p>
+      </div>
+    </div>
+    <div id="right">
+      <h2>Selamat datang!</h2>
+      <div id="welcome">
+        <img src="images/pic_1.jpg" width="171" height="137" alt="Pic 1" class="left" />
+        <center><h2>
+			List Jadwal Training
+			</h2></center>
+		<table align='center' bgcolor='' width='62%' border='1' cellpadding='0'>
+			<tr>
+				<td rowspan='2' align='center'>Kode Training</td>
+				<td colspan='2' align='center'>Tanggal</td>
+				<td colspan='2' align='center'>Durasi</td>
+				<td rowspan='2' align='center'>Waktu Training</td>
+				<td rowspan='2' align='center'>Maksimal Peserta</td>
+				<td rowspan='2' align='center'>Harga Training</td>
+				<td rowspan='2' align='center'>Lokasi Training</td>
+			</tr>
+			<tr align='center'>
+				<td>mulai</td>
+				<td>selesai</td>
+				<td>jam</td>
+				<td>hari</td>
+			</tr>
+			<tr>
+				<?php
+					while($array=mysql_fetch_array($query))
+					{
+				?>
+					<tr>
+						<td>
+							<?php echo $array['kode_paket_training'];?>
+						</td>
+						<td>
+							<?php echo $array['tanggal_mulai'];?>
+						</td>
+						<td>
+							<?php echo $array['tanggal_selesai'];?>
+						</td>
+						<td>
+							<?php echo $array['durasi_jam'];?>
+						</td>
+						<td>
+							<?php echo $array['durasi_hari'];?>
+						</td>
+						<td>
+							<?php echo $array['waktu_training'];?>
+						</td>
+						<td>
+							<?php echo $array['maksimal_peserta'];?>
+						</td>
+						<td>
+							<?php echo $array['harga_training'];?>
+						</td>
+						<td>
+							<?php echo $array['lokasi_training'];?>
+						</td>
+					</tr>
+				<?php	
+					}
+				?>
+			</tr>
+		</table>
+        <p class="more"><a href="http://">more</a></p>
+      </div>
+      <h3>Artivisi Profile</h3>
+      <div id="profile">
+        <div id="corp">
+          <div id="corp-img">
+            Corporate Building
+          </div>
+          <p>If you're having problems editing the template please don't hesitate to ask for help on <a href="http://">the forum</a>.</p>
+        </div>
+        <div id="indu">
+          <div id="indu-img">
+            Industrial
+          </div>
+          <p>This is a template designed by Farhan. Coding and databases by Lukman, Idrus, Agung, Rahmat, Jockey.</p>
+        </div>
+        <div class="clear"> </div>
+        <p class="more"><a href="http://">View Details</a></p>
+      </div>
+    </div>
+    <div class="clear"> </div>
+    <div id="spacer"> </div>
+    <div id="footer">
+      <div id="copyright">
+        Copyright &copy; 2011 Artivisi All right reserved.
+      </div>
+	  <div id="footerline"></div>
+    </div>
+	
+  </div>
+</body>
+</html>

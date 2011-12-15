@@ -6,10 +6,17 @@
 
 <html>
 	<head>
+   <title>
+     Jadwal Training
+   </title>
+   <link type="text/css" href="style.css" rel="stylesheet" />
 	</head>
 
 	<body>
-		<table bgcolor='' width='62%' border='1' cellpadding='0'>
+		<center><h2>
+			Pendaftaran Training
+			</h2></center>
+		<table align='center' bgcolor='' width='62%' border='1' cellpadding='0'>
 			<tr>
 				<td rowspan='2' align='center'>Kode Training</td>
 				<td colspan='2' align='center'>Tanggal</td>
