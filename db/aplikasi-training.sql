@@ -62,3 +62,14 @@ FOREIGN KEY(id_jadwal)
 REFERENCES Jadwal_Training(id)
 ON UPDATE CASCADE ON DELETE CASCADE
 )ENGINE=INNODB;
+
+DROP TABLE IF EXISTS Account
+create table Account
+(
+id int(5) not null primary key auto_increment,
+username varchar(50) not null,
+password varchar(50) not null,
+level enum("admin","user") not null,
+email varchar(50) not null,
+alamat varchar text
+)ENGINE=INNODB; 
