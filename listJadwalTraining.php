@@ -32,7 +32,8 @@
 				?>
 					<tr>
 						<td>
-							<?php echo $array['kode_paket_training'];?>
+							<a href=detailJadwalTraining.php?id=<?php echo $array['id'];?>>
+							<?php echo $array['kode_paket_training'];?></a>
 						</td>
 						<td>
 							<?php echo $array['tanggal_mulai'];?>

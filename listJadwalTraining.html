@@ -1,3 +1,9 @@
+<?php
+	include "configuration/configuration.php"
+	$query=mysql_query("select* from Jadwal_Training")
+
+?>
+
 <html>
 	<head>
 	</head>
@@ -20,15 +26,16 @@
 				<td>hari</td>
 			</tr>
 			<tr>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
+				<?php
+					while($jadwal=mysql_fetch_array($query))
+					echo"
+						<tr>
+						<td>"$jadwal['kode_paket_training']"</td>
+						<td>"$jadwal['tanggal_mulai']"</td>
+						</tr>
+					";
+				
+				?>
 			</tr>
 		</table>
 	</body>
