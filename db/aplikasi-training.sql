@@ -31,7 +31,8 @@ durasi_jam varchar(50) not null,
 durasi_hari varchar(50) not null,
 waktu_training varchar(50) not null,
 maksimal_peserta varchar(50) not null,
-harga_training double not null,
+harga_umum varchar(50) not null,
+harga_mahasiswa varchar(50) not null,
 lokasi_training varchar(255) not null,
 silabus longtext not null,
 fasilitas text not null,
@@ -51,6 +52,10 @@ tanggal_lahir date not null,
 pekerjaan varchar(50) not null,
 email varchar(50) not null,
 no_telpon varchar(50) not null,
+status varchar(50) not null,
+Perguruan_Tinggi varchar(50),
+jurusan varchar(50),
+semester varchar(50),
 paket_training int(5) not null,
 id_jadwal int(5) not null,
 pembayaran_dp varchar(50) not null,
@@ -62,3 +67,14 @@ FOREIGN KEY(id_jadwal)
 REFERENCES Jadwal_Training(id)
 ON UPDATE CASCADE ON DELETE CASCADE
 )ENGINE=INNODB;
+
+DROP TABLE IF EXISTS Account
+create table Account
+(
+id int(5) not null primary key auto_increment,
+username varchar(50) not null,
+password varchar(50) not null,
+level enum("admin","user") not null,
+email varchar(50) not null,
+alamat varchar text
+)ENGINE=INNODB; 
