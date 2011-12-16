@@ -1,0 +1,18 @@
+body
+	{
+	Font-Style :Sans Serif;
+	}
+th
+	{
+	Font-Size : 10pt;
+	Background-Color : 333399;
+	Color : White;
+	}
+tr.isi
+	{
+	Background-Color : LightGrey;
+	}
+tr.isi:hover
+	{
+	Background-Color : White;
+	}
