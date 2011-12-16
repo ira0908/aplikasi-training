@@ -6,33 +6,35 @@
 
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="css/design2.css" />
+		<title>
+			List Jadwal Training
+		</title>
 	</head>
-
 	<body>
-		<table bgcolor='' width='62%' border='1' cellpadding='0'>
+		<table border="2" align="center" cellpadding='4' cellspacing="0">
 			<tr>
-				<td rowspan='2' align='center'>Kode Training</td>
-				<td colspan='2' align='center'>Tanggal</td>
-				<td colspan='2' align='center'>Durasi</td>
-				<td rowspan='2' align='center'>Waktu Training</td>
-				<td rowspan='2' align='center'>Maksimal Peserta</td>
-				<td colspan='2' align='center'>Harga Training</td>
-				<td rowspan='2' align='center'>Lokasi Training</td>
+				<th rowspan='2' align='center'>Kode<br />Training</th>
+				<th colspan='2' align='center'>Tanggal</th>
+				<th colspan='2' align='center'>Durasi</th>
+				<th rowspan='2' align='center'>Waktu<br />Training</th>
+				<th rowspan='2' align='center'>Maksimal<br />Peserta</th>
+				<th colspan='2' align='center'>Harga Training</th>
+				<th rowspan='2' align='center'>Lokasi<br />Training</th>
 			</tr>
 			<tr align='center'>
-				<td>mulai</td>
-				<td>selesai</td>
-				<td>jam</td>
-				<td>hari</td>
-				<td>umum</td>
-				<td>mahasiswa</td>
+				<th>mulai</th>
+				<th>selesai</th>
+				<th>jam</th>
+				<th>hari</th>
+				<th>umum</th>
+				<th>mahasiswa</th>
 			</tr>
-			<tr>
 				<?php
 					while($array=mysql_fetch_array($query))
 					{
 				?>
-					<tr>
+					<tr class="isi">
 						<td>
 							<a href=detailJadwalTraining.php?id=<?php echo $array['id'];?>>
 							<?php echo $array['kode_paket_training'];?></a>
@@ -64,8 +66,7 @@
 					</tr>
 				<?php	
 					}
-				?>
-			</tr>
+				?>	
 		</table>
 	</body>
 </html>
