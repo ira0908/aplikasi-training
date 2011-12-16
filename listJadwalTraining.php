@@ -16,7 +16,7 @@
 				<td colspan='2' align='center'>Durasi</td>
 				<td rowspan='2' align='center'>Waktu Training</td>
 				<td rowspan='2' align='center'>Maksimal Peserta</td>
-				<td rowspan='2' align='center'>Harga Training</td>
+				<td colspan='2' align='center'>Harga Training</td>
 				<td rowspan='2' align='center'>Lokasi Training</td>
 			</tr>
 			<tr align='center'>
@@ -24,6 +24,8 @@
 				<td>selesai</td>
 				<td>jam</td>
 				<td>hari</td>
+				<td>umum</td>
+				<td>mahasiswa</td>
 			</tr>
 			<tr>
 				<?php
